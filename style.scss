@@ -1,0 +1,1672 @@
+// ================================================================================== VAR ======================================================
+
+$primaryBlack: rgba(72, 69, 67, 1);
+$parColor: rgb(97, 100, 103);
+$headingColor: rgb(57, 61, 69);
+$background: rgba(248, 248, 248, 1);
+// ================================================================================== MIXINS ======================================================
+
+@mixin global-par-lg{
+    color: $parColor;
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+}
+
+@mixin global-heading-lg{
+    color: $headingColor;
+    font-family: Lato;
+    font-size: 45px;
+    ont-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    letter-spacing: 0.675px;
+}
+
+@mixin global-par-tabl{
+    color: $parColor;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+
+}
+
+@mixin global-heading-tabl{
+    color: $headingColor;
+    font-family: Lato;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    letter-spacing: 0.48px;
+}
+
+@mixin global-par-mob{
+    color: $parColor;
+    font-size: 14px;
+    ont-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.21px;
+}
+
+@mixin global-heading-mob{
+    color: $headingColor;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+// ================================================================================== COMMON ======================================================
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding-left: calc(50% - 1440px / 2);
+    padding-right: calc(50% - 1440px / 2);
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+li{
+    list-style-type: none;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.pointer{
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.25);
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 24px;
+    margin-bottom: 50px;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: $background;
+    padding: 44px 77px 35px 104px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 210px;
+    }
+    
+    &__logo{
+        color: $headingColor;
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__close{
+        display: none;
+    }
+
+    &__burger{
+        display: none;
+    }
+
+    &__nav{
+        display: flex;
+    }
+    &__rightBlock{
+        display: flex;
+        flex-direction: row;
+        gap: 68px;
+    }
+    &__buy{
+        position: relative;
+    }
+    &__buy0{
+        position: absolute;
+        right: -7px;
+    }
+    &__login{
+        background-color: rgb(33, 31, 28);
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding: 8px 32px;
+        border: 2px solid rgb(33, 31, 28);
+        box-sizing: border-box;
+        transition: all .7s;
+    }
+
+    &__login:hover{
+        background-color: #FFF;
+        color: rgb(33, 31, 28); 
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    align-items: center;
+  
+    &__link{
+        color: $headingColor;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__link:hover{
+        text-decoration: underline;
+    }
+
+   
+}
+
+.footer{
+    background-color: $primaryBlack;
+    padding: 73px 70px 84px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    &__logo{
+        color: rgb(255, 255, 255);
+        font-family: Roboto;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-bottom: 8px;
+    }
+
+    &__par{
+        color: rgb(255, 255, 255);
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__rightBlock{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+
+    &__icons{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+// ================================================================================== PAGE HOME ======================================================
+
+// ---- 2 block LOGITECH
+
+.logitech{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 76px 97px 105px;
+    background: linear-gradient(90deg, #FCF9F6 0%, #FFF 100%);
+
+    &__block{
+        padding-top: 50px;
+    }
+   
+    &__heading{
+        color: $headingColor;
+        font-family: Lato;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 132%;
+        letter-spacing: 0.9px;
+        margin-bottom: 41px;
+        width: 587px;
+    }
+
+    &__par{
+        @include global-par-lg;
+        margin-bottom: 51px;
+        width: 534px;
+    }
+
+    &__shop{
+        background-color: rgba(33, 31, 28, 1);
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%;
+        letter-spacing: 0.3px;
+        padding: 12px 36px;
+        border: 2px solid rgba(33, 31, 28, 1);
+        box-sizing: border-box;
+        transition: all .7s;
+    }
+
+    &__shop:hover{
+        background-color: #FFF;
+        color: rgba(33, 31, 28, 1);
+    }
+}
+
+// ---- 3 block  PARTNERS
+
+.partners{
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 114px 186px;
+
+    &__heading{
+        @include global-heading-lg;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+
+    &__block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+// ------ 4 block PRODUCT
+
+.product{
+    background-color: $background;
+    padding: 62px 74px;
+
+    &__heading{
+        @include global-heading-lg;
+        margin-bottom: 73px;
+        text-align: center;
+    }
+
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        // display: grid;
+        // grid-template-columns: repeat(4, 269px);
+        row-gap: 40px;
+        justify-content: space-between;
+        margin-bottom: 66px;
+    }
+
+    &__info{
+        width: 269px;
+        height: 418px;
+        position: relative;
+        box-shadow: 9px 11px 8px 0px rgba(34, 60, 80, 0.2);
+        border-radius: 6%;
+    }
+
+    &__info:hover{
+        cursor: pointer;
+    }
+
+    &__info-1{
+        background-image: url("pic/block1.png");
+    }
+
+    &__info-2{
+        background-image: url("pic/block2.png");
+    }
+
+    &__info-3{
+        background-image: url("pic/block3.png");
+    }
+    
+    &__info-4{
+        background-image: url("pic/block4.png");
+    }
+
+    &__info-5{
+        background-image: url("pic/block5.png");
+    }
+
+    &__info-6{
+        background-image: url("pic/block6.png");
+    }
+    
+    &__info-7{
+        background-image: url("pic/block7.png");
+    }
+
+    &__info-8{
+        background-image: url("pic/block8.png");
+    }
+    &__button{
+        background-color: $headingColor;
+        padding: 10px 44px;
+        border-radius: 10px;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 2px solid $headingColor;
+        box-sizing: border-box;
+        transition: all .7s;
+    }
+
+    &__button:hover{
+        background-color: #FFF;
+        color:  $headingColor;
+
+
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        position: absolute;
+        bottom: 16px;
+        left: 32px;
+    }
+
+    &__all{
+        display: block;
+        margin: auto;
+        text-align: center;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        background-color: $headingColor;
+        width: 218px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border: 2px solid $headingColor;
+        box-sizing: border-box;
+        transition: all .7s;
+    }
+
+    &__all:hover{
+        background-color: #FFF;
+        color: $headingColor; 
+    }
+}
+
+// ------- 5 block BENEFITS
+
+.benefits{
+    background-color: rgba(255, 255, 255, 1);
+    padding: 103px 157px 143px 147px;
+
+    &__heading{
+        @include global-heading-lg;
+        margin-bottom: 135px;
+        text-align: center;
+    }
+
+    &__block{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__conditions{
+        width: 331px;
+    }
+
+    &__img{
+        display: block;
+        margin: auto;
+        margin-bottom: 38px;
+    }
+
+    &__h3{
+        color: $headingColor;
+        font-family: Roboto;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    &__par{
+        @include global-par-lg;
+        text-align: center;
+    }
+} 
+
+// -------- 6 block COSTUMERS
+
+.costumers{
+    background-color: $background;
+    padding: 96px 182px 139px 181px;
+
+    &__heading{
+        @include global-heading-lg;
+        margin-bottom: 99px;
+        text-align: center;
+    }
+
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__h3{
+        color: $headingColor;
+        font-family: Lato;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 63px;
+    }
+
+    &__woman-2{
+        display: none;
+    }
+
+    &__par{
+        @include global-par-lg;
+        margin-bottom: 53px;
+        max-width: 677px;
+    }
+
+    &__name{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__client{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+// -------- 7 block FOOTER
+
+
+// ================================================================================== PAGE PRODUCTS ======================================================
+
+.productsPage{
+    padding: 40px 77px 100px 104px;
+    background-color: rgba(255, 255, 255, 1);
+    
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-left: 35px;
+        
+    }
+
+    &__leftBlock{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-right: 38px;
+    }
+
+    &__filter, &__range{
+        color: #000;
+        font-family: Roboto;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+        letter-spacing: 0.39px;
+        margin-bottom: 63px;
+    }
+
+    &__range{
+        margin-bottom: 17px;
+    }
+
+    &__rightBlock{
+        flex-grow: 1;
+        padding-left: 27px;
+        border-left: 1px solid rgb(235, 235, 235);
+    }        
+
+    &__search{
+        background-color: rgb(245, 247, 251);;
+        border-radius: 25px;
+    }
+
+    &__input{
+        width: 100%;
+        height: 56px;
+        color: #616467;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%; 
+        letter-spacing: 0.3px;
+        padding-right: 20px;
+        padding-left: 50px;
+        border-radius: 25px;
+        outline: none;
+    }
+
+    &__input::placeholder{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%; 
+        letter-spacing: 0.3px;
+    }
+
+    &__searchResult{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 24px;
+
+    }
+
+    &__sort{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%; 
+        letter-spacing: 0.24px;
+        border-radius: 10px;
+    }
+
+    &__mouses{
+        display: grid;
+        grid-template-columns: repeat(4, 203px);
+        row-gap: 51px;
+        justify-content: space-between;
+        padding-bottom: 83px;
+    }
+
+    &__info{
+        width: 203px;
+        height: 296px;
+        position: relative;
+        // box-shadow: 9px 11px 8px 0px rgba(34, 60, 80, 0.2);
+        border-radius: 6%;
+
+    }
+
+    &__info:hover{
+        cursor: pointer;
+    }
+
+    &__info-1{
+        background-image: url("pic/block1s.png");
+    }
+
+    &__info-2{
+        background-image: url("pic/block2s.png");
+    }
+
+    &__info-3{
+        background-image: url("pic/block3s.png");
+    }
+
+    &__info-4{
+        background-image: url("pic/block4s.png");
+    }
+
+    &__info-5{
+        background-image: url("pic/block5s.png");
+    }
+
+    &__info-6{
+        background-image: url("pic/block6s.png");
+    }
+
+    &__info-7{
+        background-image: url("pic/block7s.png");
+    }
+
+    &__info-8{
+        background-image: url("pic/block8s.png");
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: row;
+        gap: 11px;
+        position: absolute;
+        bottom: 11px;
+        left: 24px;
+    }
+
+    &__button{
+        background-color: $headingColor;
+        padding: 7px 32px;
+        border-radius: 10px;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 2px solid $headingColor;
+        box-sizing: border-box;
+        transition: all .7s;
+    }
+
+    &__button:hover{
+        background-color: #FFF;
+        color:  $headingColor;
+    }
+
+    &__model{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        bottom: -30px;
+    }
+
+    &__g102{
+        color: $headingColor;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__price{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    
+}
+input.icon{
+    background: url(pic/search.svg) no-repeat left;
+
+}
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &__block{
+        width: 218px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    &__par{
+        color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 132%;
+        letter-spacing: 0.24px;
+        margin-bottom: 24px;
+    }
+
+    &__label{
+        color: $parColor;
+        cursor: pointer;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%; /* 21.12px */
+        letter-spacing: 0.24px;
+    }
+}
+
+.select{
+    width: 70px;
+    margin: auto;
+    margin-bottom: 42px;
+    margin-top: 0;
+
+    &__option{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%;
+        letter-spacing: 0.24px;
+    }
+}
+
+.form2{
+    display: grid;
+    grid-row-gap: 12px;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__min, &__max {
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%;
+        letter-spacing: 0.21px;
+        width: 101px;
+        height: 31px;
+        border-radius: 10px;
+        border: 1px solid rgb(197, 197, 197);
+        background: #F5F7FB;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+    &__min::placeholder{
+        color: rgb(163, 163, 163);
+
+    }
+    &__max::placeholder{
+        color: rgb(0, 0, 0);
+    }
+
+    &__set{
+        color: rgb(255, 255, 255);
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%; 
+        letter-spacing: 0.21px;
+        border-radius: 10px;
+        background: #211F1C;
+        width: 215.159px;
+        height: 36px;
+        text-align: center;
+        grid-column: 1 / -1;
+        transition: all .7s;
+        margin-bottom: 63px;
+
+    }
+
+    &__set:hover{
+        cursor: pointer;
+        color: #211F1C;
+        background:  rgb(255, 255, 255);
+    }
+
+    &__clear{
+        color: #211F1C;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 132%; 
+        letter-spacing: 0.21px;
+        border-radius: 10px;
+        background: rgb(255, 255, 255);
+        width: 215.159px;
+        height: 36px;
+        text-align: center;
+        grid-column: 1 / -1;
+        transition: all .7s;
+    }
+
+    &__clear:hover{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        background:  #211F1C;
+        }
+    
+}
+
+// ================================================================================== PAGE ABOUT ======================================================
+
+.about{
+    padding: 40px 90px 175px 90px;
+    background-color: rgba(255, 255, 255, 1);
+
+    &__home{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__about{
+        color: $parColor;
+        font-family: Roboto;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__bottomBlock{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
+
+    &__heading{
+        color: #616467;
+        font-family: Roboto;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__underline{
+        width: 101px;
+        height: 2px;
+        background-color: $parColor;
+        margin-bottom: 107px;
+    }
+
+    &__par{
+        @include global-par-lg;
+        width: 589px;
+    }
+
+}
+
+// =================================================================================== PAGE LOGIN ======================================================
+
+.login{
+    padding: 35px 240px 42px 240px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background: #FFF;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__login{
+        padding: 67px 61px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form{
+        width: 336px;
+    }
+
+    &__heading{
+        @include global-heading-lg;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    &__input{
+        display: block;
+        width: 100%;
+        height: 52px;
+        border-radius: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    &__input-1{
+        background: url(pic/user.svg) no-repeat left;
+        margin-bottom: 41px;
+    }
+
+    &__input-2{
+        background: url(pic/lock.svg) no-repeat left;
+        margin-bottom: 8px;
+    }
+
+    &__par{
+        color: rgb(51, 71, 86);
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__par-1{
+        text-align: right;
+        margin-bottom: 45px;
+    }
+
+    &__par-1:hover{
+        text-decoration: underline;
+    }
+
+    &__par-2{
+        text-align: center;
+    }
+
+    &__lupa{
+        color: rgb(51, 71, 86);
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__daftar{
+        color: rgb(51, 71, 86);
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: underline;
+
+    }
+
+    &__button{
+        width: 100%;
+        border-radius: 50px;
+        background: #211F1C;
+        color: #FBFBFB;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        padding-bottom: 14px;
+        padding-top: 14px;
+        margin-bottom: 22px;
+        cursor: pointer;
+        transition: all .7s;
+    }
+
+    &__button:hover{
+        background: #FBFBFB;
+        color:  #211F1C;
+        
+    }
+}
+
+// ==================================================================================== MEDIA 768px================================================
+
+
+
+@media (max-width: 1392px){
+
+    .logitech{
+        flex-direction: column;
+        align-items: center;
+
+        &__block{
+            margin-bottom: 90px;
+        }
+
+        &__heading{
+            
+            width: 100%;
+        }
+
+        &__par{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        &__shop{
+            padding: 9px 58px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        // &__photo{
+        //     display: none;
+        // }
+    }
+
+    .costumers{
+        &__block{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__h3{
+            text-align: center;
+        }
+    }
+
+    .benefits{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 1220px){
+    .partners{
+        padding-left: 86px;
+        padding-right: 86px;
+
+    }
+}
+
+@media (max-width: 1115px){
+    .header{
+        &__container{
+            gap: 0px;
+        }
+    }
+
+    .benefits{
+        &__block{
+            gap: 30px;
+        }
+
+        &__conditions-1{
+            flex-grow: 1;
+            margin: auto;
+        }
+
+        &__conditions-2{
+            flex-grow: 1;
+            margin: auto;
+        }
+
+        &__conditions-3{
+            flex-grow: 1;
+            margin: auto;
+        }
+    }
+
+}
+
+@media (max-width: 971px){
+    .product{
+        &__block{
+            justify-content: space-around;
+        }
+    }
+
+    .menu{
+        &__li-slash{
+            display: none;
+        }
+    }
+
+    .partners{
+        &__block{
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            justify-content: space-around;
+            row-gap: 50px;
+        }
+
+        &__img{
+            width: 150px;
+        }
+    }
+
+}
+
+@media (max-width: 768px){
+    body{
+        padding-left: calc(50% - 768px / 2);
+        padding-right: calc(50% - 768px / 2);
+    }
+
+    .header{
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+
+        &__burger{
+            display: block;
+        }
+
+        &__close{
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        &__container {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            transition: left, .5s;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: rgb(243, 233, 233);
+            z-index: 1000;
+                    
+            }
+
+        &__nav{
+            padding-left: 100px;
+        }
+
+        &__rightBlock{
+            align-items: center;
+        }
+    }
+        
+
+
+    .logitech{
+        align-items: start;
+        padding-top: 0;
+        padding-bottom: 165px;
+       
+        &__heading{
+            @include global-heading-tabl;
+            width: 432px;
+            margin-bottom: 29px;
+        }
+    
+        &__par{
+            @include global-par-tabl;
+            width: 413px;
+            margin-bottom: 40px;
+        }
+    
+        &__shop{
+            padding: 9px 58px;
+            border-radius: 10px;
+            
+        }
+    
+        &__photo{
+            display: none;
+        }
+    }
+    
+    .partners{
+        padding: 56px 149px 51px 149px;
+    
+        &__block{
+        row-gap: 46px;
+        }
+    
+        &__heading{
+            @include global-heading-tabl;
+            margin-bottom: 43px;    
+        }
+    }
+    
+    .product{
+        padding: 50px 50px 40px 50px;
+    
+        &__heading{
+            @include global-heading-tabl;
+            margin-bottom: 46px;
+        }
+    
+        &__block{
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        &__info{
+            width: 196px;
+            height: 322px;
+            position: relative;
+            box-shadow: 9px 11px 8px 0px rgba(34, 60, 80, 0.2);
+            border-radius: 6%;
+        }
+    
+        &__button{
+            padding: 9px 30px 5px 30px;
+        }
+    
+        &__card{
+            gap: 12px;
+            bottom: 17px;
+            left: 16px;
+        }
+    
+        &__all{
+            width: 179px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+    }
+    
+    .benefits{
+        padding: 28px 49px 25px 43px;
+    
+        &__heading{
+            @include global-heading-tabl;
+            margin-bottom: 75px;
+        }
+    
+        &__h3{
+                font-size: 20px;
+        }
+    
+        &__block{
+            gap:0px;
+            row-gap: 57px;
+        }
+    
+        &__conditions-1{
+            max-width: 300px;
+        }
+    
+        &__conditions-2{
+            max-width: 331px;
+        }
+    
+        &__conditions-3{
+            max-width: 371px;
+            flex-grow: 1;
+            margin: auto;
+        }
+    
+        &__par{
+            @include global-par-tabl;
+        }
+    }
+    
+    .costumers{
+        padding: 40px 100px 108px 100px;
+    
+        &__block{
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        &__heading{
+            @include global-heading-tabl;
+    
+        }
+    
+        &__woman-1{
+            display: none;
+        }
+    
+        &__woman-2{
+            display: block;
+            border-radius: 50%;
+            margin-bottom: 21px;
+        }
+    
+        &__h3{
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 23px;
+        }
+    
+        &__par{
+            @include global-par-tabl;
+            margin-bottom: 32px;
+        }
+    
+        &__name{
+            text-align: center;
+        }
+    
+        &__client{
+            text-align: center;
+        }
+    }
+    
+    .footer{
+        &__rightBlock{
+            gap: 20px;
+        }
+                
+        &__icons{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    
+}
+
+@media (max-width: 740px){
+
+    .logitech{
+        // padding-left: 50px;
+        padding-right: 35px;
+    }
+
+    .partners{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .benefits{
+        &__conditions-1{
+            flex-grow: 1;
+            margin: auto;
+        }
+
+        &__conditions-2{
+            flex-grow: 1;
+            margin: auto;
+        }
+
+    }
+}
+
+@media (max-width: 670px){
+    .header{
+
+        &__container{
+            flex-direction: column;
+            row-gap: 30px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            align-items: center;
+        }
+
+        &__nav{
+            padding-left: 0;
+        }
+    }
+}
+
+@media (max-width: 554px){
+    .header{
+        padding-left: 50px;
+    }
+
+    .logitech{
+        padding-left: 50px;
+        padding-bottom: 100px;
+
+        &__block{
+            margin-bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 508px){
+
+    .header{
+        padding: 0px 0px 0px 20px;
+
+        &__logo{
+            font-size: 25px;
+        }
+
+        &__burger-img{
+            width: 52px;
+            height: 52px;
+        }
+
+        &__container{
+            align-items: center;
+            row-gap: 15px;
+        }
+
+        &__close{
+            width: 20px;
+            height: 20px;
+        }
+
+        &__nav{
+            padding-left: 0px;
+        }
+
+        &__rightBlock{
+            padding-left: 0px;
+        }
+
+        &__login{
+            font-size: 10px;
+            border-radius: 5px;
+        }
+    }
+
+    .logitech{
+        padding: 25px 24px 41px 20px;
+
+        &__block{
+            padding-top: 0px;
+            max-width: 100%;
+            margin-bottom: 0px;
+        }
+
+        &__heading{
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 132%; /* 39.6px */
+            letter-spacing: 0.45px;
+            width: 293px;
+            margin-bottom: 12px;
+        }
+
+        &__par{
+            width: 184px;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        &__shop{
+            font-size: 10px;
+            padding-top: 6px;
+            padding-bottom: 7px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .partners{
+        padding: 20px 47px 24px 46px;
+
+        &__heading{
+            @include global-heading-mob;
+            margin-bottom: 41px;
+        }
+
+        &__block{
+            display: grid;
+            grid-template-columns: repeat(2, 100px);
+        }
+
+        &__img{
+            width: 100px;
+        }
+
+        &__img-1{
+            height: 20px;
+        }
+
+        &__img-2{
+            height: 19px;
+        }
+
+        &__img-3{
+            height: 16px;
+        }
+
+        &__img-4{
+            height: 26px;
+        }
+    }
+
+    .product{
+        padding: 20px 31px 37px 31px;
+        
+        &__heading{
+            @include global-heading-mob;
+        }
+        &__block{
+            display: grid;
+            grid-template-columns: repeat(2, 129px);
+        }
+
+        &__info{
+            width: 129px;
+            height: 200px;
+            position: relative;
+            box-shadow: none;
+            border-radius: 10px;
+        }
+        
+        &__button{
+            font-size: 10px;
+            padding: 2px 15px;
+        }
+
+        &__card{
+            align-items: center;
+            left: 16px;
+            bottom: 7px;
+            gap: 6px;
+        }
+
+        &__basket{
+            width: 25px;
+            height: 18px;
+            border-radius: 10px;
+        }
+
+        &__all{
+            font-size: 12px;
+            padding: 10px 26px 7px 25px;
+            border-radius: 2px;
+        }
+    }
+
+    .benefits{
+        padding: 28px 16px;
+
+        &__heading{
+            @include global-heading-mob;
+            margin-bottom: 30px;
+        }
+
+        &__h3{
+            font-size: 20px;
+        }
+
+        &__par{
+            @include global-par-mob;
+            line-height: 35px;
+        }
+    }
+
+    .costumers{
+        padding-left: 12px;
+        padding-right: 12px;
+
+        &__heading{
+            @include global-heading-mob;
+            margin-bottom: 40px;
+        }
+
+        &__woman-2{
+            margin-bottom: 17px;
+        }
+
+        &__h3{
+            font-size: 16px;
+        }
+
+        &__par{
+            @include global-par-mob;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        &__name{
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        &__client{
+            font-size: 14px;
+        }
+    }
+
+    .footer{
+        padding: 18px 28px 24px 28px;
+        flex-direction: column;
+        align-items: center;
+        
+        &__logo{
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            margin: auto;
+            text-align: center;
+        }
+
+        &__par{
+            font-family: Roboto;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 8px;
+        }
+
+        &__icons{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
