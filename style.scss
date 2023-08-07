@@ -106,6 +106,7 @@ a{
     justify-content: space-between;
     align-items: center;
 
+
     &__container{
         display: flex;
         flex-direction: row;
@@ -541,6 +542,20 @@ a{
 .productsPage{
     padding: 40px 77px 100px 104px;
     background-color: rgba(255, 255, 255, 1);
+
+    // .productsPage__header-mob{
+    //     display: none;
+    // }    
+    
+    &__filter-mob{
+        color: #000;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: none;
+    }
     
     &__block{
         display: flex;
@@ -550,11 +565,16 @@ a{
         
     }
 
+
     &__leftBlock{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         padding-right: 38px;
+    }
+
+    &__close-mob{
+        display: none;
     }
 
     &__filter, &__range{
@@ -573,6 +593,7 @@ a{
     }
 
     &__rightBlock{
+       
         flex-grow: 1;
         padding-left: 27px;
         border-left: 1px solid rgb(235, 235, 235);
@@ -862,7 +883,7 @@ input.icon{
         letter-spacing: 0.21px;
         border-radius: 10px;
         background: rgb(255, 255, 255);
-        width: 215.159px;
+        width: 215px;
         height: 36px;
         text-align: center;
         grid-column: 1 / -1;
@@ -874,6 +895,10 @@ input.icon{
         color: rgb(255, 255, 255);
         background:  #211F1C;
         }
+
+    &__apply{
+        display: none;
+    }    
     
 }
 
@@ -1094,6 +1119,13 @@ input.icon{
         padding-left: 50px;
         padding-right: 50px;
     }
+
+    .productsPage{
+
+        &__mouses{
+            grid-template-columns: repeat(3, 203px);
+        }
+    }
 }
 
 @media (max-width: 1220px){
@@ -1101,6 +1133,15 @@ input.icon{
         padding-left: 86px;
         padding-right: 86px;
 
+    }
+
+    
+    .productsPage{
+
+        &__mouses{
+            grid-template-columns: repeat(2, 203px);
+            justify-content: space-around;
+        }
     }
 }
 
@@ -1157,6 +1198,24 @@ input.icon{
 
         &__img{
             width: 150px;
+        }
+    }
+
+    .productsPage{
+        padding-left: 40px;
+        padding-right: 40px;
+        &__block{
+            padding-left: 0px;
+        }
+
+        &__mouses{
+            grid-template-columns: repeat(2, 183px);
+            justify-content: space-around;
+        }
+
+        &__info{
+            width: 183px;
+            height: 289px;
         }
     }
 
@@ -1379,6 +1438,17 @@ input.icon{
             height: 30px;
         }
     }
+
+    .productsPage{
+        
+        &__mouses{
+            grid-template-columns: repeat(1, 183px);
+            justify-content: space-around;
+        }
+
+       
+    }
+
     
 }
 
@@ -1406,6 +1476,23 @@ input.icon{
         }
 
     }
+
+    .productsPage{
+        &__searchResult{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        &__rightBlock{
+            padding-left: 0px;
+        }
+
+        &__mouses{
+            justify-content: start;
+        }
+    }
+
 }
 
 @media (max-width: 670px){
@@ -1421,6 +1508,24 @@ input.icon{
 
         &__nav{
             padding-left: 0;
+        }
+    }
+
+    .productsPage{
+
+        &__block{
+            justify-content: center;
+        }
+
+        &__searchResult{
+            flex-direction: row;
+        }
+        &__leftBlock{
+          margin-bottom: 50px;
+        }
+        &__mouses{
+            grid-template-columns: repeat(2, 183px);
+            justify-content: space-around;
         }
     }
 }
@@ -1442,8 +1547,23 @@ input.icon{
 
 @media (max-width: 508px){
 
+    .pointer{
+        display: none;
+    }
+
+    .about{
+        &__home, &__about{
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 132%;
+        }
+    }
+    
+
     .header{
         padding: 0px 0px 0px 20px;
+
 
         &__logo{
             font-size: 25px;
@@ -1476,6 +1596,10 @@ input.icon{
             font-size: 10px;
             border-radius: 5px;
         }
+    }
+
+    .header-products{
+        display: none;
     }
 
     .logitech{
@@ -1669,4 +1793,92 @@ input.icon{
             height: 20px;
         }
     }
+
+    .productsPage{
+        overflow: hidden;
+        padding-top: 32px; 
+        padding-right:  35px;
+        padding-left: 25px;
+
+        &__block{
+            justify-content: start;
+            position: relative;
+        }
+        
+        &__leftBlock{
+            padding-right: 0px;
+        }
+        
+        &__filter-mob{
+            display: block;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }
+        
+
+        &__block-mob{
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            // align-items: center;
+            margin-bottom: 40px;
+        }
+
+        &__filter{
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 0;
+        }
+
+        &__close-mob{
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        &__range{
+            font-size: 16px;
+            font-weight: 700;
+
+        }
+        &__rightBlock{
+            display: none;
+        }
+       
+    }
+
+    .form2{
+        &__apply{
+            display: block;
+        }
+
+        &__set{
+            margin-bottom: 192px;
+        }
+
+        &__clear, &__apply{
+            width: 140px;
+            height: 36px;
+            font-size: 16px;
+        }
+
+        &__clear{
+            grid-column: 1 / 1;
+
+        }
+
+        &__apply{
+            border-radius: 10px;
+            border: 1px solid #000;
+            background: #211F1C;
+            color: rgba(255, 255, 255, 1);
+
+        }
+    }
+
+    
+}   .footer{
+    display: none;
 }
