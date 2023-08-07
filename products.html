@@ -12,15 +12,17 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header header-products">
         <a href="index.html" class="header__logo">Shoply.</a>
+        <a href="#" class="header__burger"><img class="header__burger-img" src="pic/burger.svg" alt="menu"></a>
         <div class="header__container">
+            <img class="header__close" src="pic/close.svg" alt="close">
             <nav class="header__nav">
                 <ul class="menu">
                     <li class="menu__li"><a href="index.html" class="menu__link">Home</a> </li>
-                    <li class="menu__li">/</li>
-                    <li class="menu__li"><a href="#" class="menu__link">Products</a> </li>
-                    <li class="menu__li">/</li>
+                    <li class="menu__li menu__li-slash">/</li>
+                    <li class="menu__li"><a href="products.html" class="menu__link">Products</a> </li>
+                    <li class="menu__li menu__li-slash">/</li>
                     <li class="menu__li"> <a href="about.html" class="menu__link">About</a> </li>
                 </ul>
             </nav>
@@ -53,12 +55,20 @@
     </header>
 
     <section class="productsPage">
+
+        <!-- <h3 class="productsPage__filter-mob">Filter</h3> -->
+
         <div class="pointer"><span class="about__home">Home > </span> <span class="about__about">Product</span>
         </div>
 
         <div class="productsPage__block">
             <div class="productsPage__leftBlock">
-                <h3 class="productsPage__filter">Filter</h3>
+                <div class="productsPage__block-mob">
+                    <h3 class="productsPage__filter">Filter</h3>
+                    <img class="productsPage__close-mob" src="pic/closeFilter.svg" alt="close">
+                </div>
+
+
                 <form class="form">
                     <p class="form__par">Product Category</p>
                     <div class="form__block">
@@ -97,7 +107,10 @@
                     <input class="form2__min" type="text" placeholder="Min">
                     <input class="form2__max" type="text" placeholder="$400">
                     <button class="form2__set" type="submit">Set Price</button>
+                    <!-- <div class="form2__button-block"></div> -->
                     <button class="form2__clear" type="submit">Clear Filter</button>
+                    <button class="form2__apply" type="submit">Apply</button>
+
                 </form>
             </div>
 
@@ -222,6 +235,51 @@
             <a class="footer__links" href="#"><img class="footer__icons" src="pic/youtube.svg" alt="youtube"></a>
         </div>
     </footer>
+
+    <script>
+
+        const burgerEl = document.querySelector(".header__burger");
+        const navEl = document.querySelector(".header__container");
+        const closeEl = document.querySelector(".header__close");
+
+        burgerEl.addEventListener("click", function (e) {
+            navEl.style.left = 0;
+        });
+
+        closeEl.addEventListener("click", function (e) {
+            navEl.style.left = "-100%";
+        });
+
+        //====================================
+        // const filterEl = document.querySelector(".productsPage__filter-mob");
+        // const leftBlockEl = document.querySelector(".productsPage__leftBlock");
+        // const rightBlockEl = document.querySelector(".productsPage__rightBlock");
+        // const pointerEl = document.querySelector(".pointer");
+        // const filterCloseEl = document.querySelector(".productsPage__close-mob");
+
+
+
+
+        // filterEl.addEventListener("click", function (e) {
+        //     leftBlockEl.style.left = 0;
+        //     rightBlockEl.style.display = "none";
+        //     filterEl.style.display = "none";
+        //     pointerEl.style.display = "none";
+        //     filterCloseEl.style.display = "block";
+
+        // });
+
+        // filterCloseEl.addEventListener("click", function (e) {
+        //     leftBlockEl.style.display = "none";
+        //     rightBlockEl.style.display = "block";
+        //     filterEl.style.display = "block";
+        //     pointerEl.style.display = "block";
+        //     filterCloseEl.style.display = "none";
+
+        // });
+
+
+    </script>
 </body>
 
 </html>
