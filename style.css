@@ -439,6 +439,15 @@ a {
   padding: 40px 77px 100px 104px;
   background-color: rgb(255, 255, 255);
 }
+.productsPage__filter-mob {
+  color: #000;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: none;
+}
 .productsPage__block {
   display: flex;
   flex-wrap: wrap;
@@ -450,6 +459,9 @@ a {
   flex-wrap: wrap;
   flex-direction: column;
   padding-right: 38px;
+}
+.productsPage__close-mob {
+  display: none;
 }
 .productsPage__filter, .productsPage__range {
   color: #000;
@@ -733,7 +745,7 @@ input.icon {
   letter-spacing: 0.21px;
   border-radius: 10px;
   background: rgb(255, 255, 255);
-  width: 215.159px;
+  width: 215px;
   height: 36px;
   text-align: center;
   grid-column: 1/-1;
@@ -743,6 +755,9 @@ input.icon {
   cursor: pointer;
   color: rgb(255, 255, 255);
   background: #211F1C;
+}
+.form2__apply {
+  display: none;
 }
 
 .about {
@@ -927,11 +942,18 @@ input.icon {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .productsPage__mouses {
+    grid-template-columns: repeat(3, 203px);
+  }
 }
 @media (max-width: 1220px) {
   .partners {
     padding-left: 86px;
     padding-right: 86px;
+  }
+  .productsPage__mouses {
+    grid-template-columns: repeat(2, 203px);
+    justify-content: space-around;
   }
 }
 @media (max-width: 1115px) {
@@ -969,6 +991,21 @@ input.icon {
   }
   .partners__img {
     width: 150px;
+  }
+  .productsPage {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .productsPage__block {
+    padding-left: 0px;
+  }
+  .productsPage__mouses {
+    grid-template-columns: repeat(2, 183px);
+    justify-content: space-around;
+  }
+  .productsPage__info {
+    width: 183px;
+    height: 289px;
   }
 }
 @media (max-width: 768px) {
@@ -1186,6 +1223,10 @@ input.icon {
     width: 30px;
     height: 30px;
   }
+  .productsPage__mouses {
+    grid-template-columns: repeat(1, 183px);
+    justify-content: space-around;
+  }
 }
 @media (max-width: 740px) {
   .logitech {
@@ -1203,6 +1244,17 @@ input.icon {
     flex-grow: 1;
     margin: auto;
   }
+  .productsPage__searchResult {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .productsPage__rightBlock {
+    padding-left: 0px;
+  }
+  .productsPage__mouses {
+    justify-content: start;
+  }
 }
 @media (max-width: 670px) {
   .header__container {
@@ -1214,6 +1266,19 @@ input.icon {
   }
   .header__nav {
     padding-left: 0;
+  }
+  .productsPage__block {
+    justify-content: center;
+  }
+  .productsPage__searchResult {
+    flex-direction: row;
+  }
+  .productsPage__leftBlock {
+    margin-bottom: 50px;
+  }
+  .productsPage__mouses {
+    grid-template-columns: repeat(2, 183px);
+    justify-content: space-around;
   }
 }
 @media (max-width: 554px) {
@@ -1229,6 +1294,15 @@ input.icon {
   }
 }
 @media (max-width: 508px) {
+  .pointer {
+    display: none;
+  }
+  .about__home, .about__about {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%;
+  }
   .header {
     padding: 0px 0px 0px 20px;
   }
@@ -1256,6 +1330,9 @@ input.icon {
   .header__login {
     font-size: 10px;
     border-radius: 5px;
+  }
+  .header-products {
+    display: none;
   }
   .logitech {
     padding: 25px 24px 41px 20px;
@@ -1444,4 +1521,67 @@ input.icon {
     width: 20px;
     height: 20px;
   }
+  .productsPage {
+    overflow: hidden;
+    padding-top: 32px;
+    padding-right: 35px;
+    padding-left: 25px;
+  }
+  .productsPage__block {
+    justify-content: start;
+    position: relative;
+  }
+  .productsPage__leftBlock {
+    padding-right: 0px;
+  }
+  .productsPage__filter-mob {
+    display: block;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+  .productsPage__block-mob {
+    margin-bottom: 40px;
+  }
+  .productsPage__filter {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .productsPage__close-mob {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .productsPage__range {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .productsPage__rightBlock {
+    display: none;
+  }
+  .form2__apply {
+    display: block;
+  }
+  .form2__set {
+    margin-bottom: 192px;
+  }
+  .form2__clear, .form2__apply {
+    width: 140px;
+    height: 36px;
+    font-size: 16px;
+  }
+  .form2__clear {
+    grid-column: 1/1;
+  }
+  .form2__apply {
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #211F1C;
+    color: rgb(255, 255, 255);
+  }
+}
+.footer {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
