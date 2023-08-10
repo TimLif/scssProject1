@@ -818,12 +818,10 @@ input.icon {
   flex-wrap: wrap;
 }
 .login__login {
+  flex-grow: 1;
   padding: 67px 61px;
   display: flex;
   flex-direction: column;
-}
-.login__form {
-  width: 336px;
 }
 .login__heading {
   color: rgb(57, 61, 69);
@@ -911,6 +909,14 @@ input.icon {
   color: #211F1C;
 }
 
+@media (max-width: 1420px) {
+  .about__bottomBlock {
+    justify-content: center;
+  }
+  .about__img {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 1392px) {
   .logitech {
     flex-direction: column;
@@ -945,11 +951,21 @@ input.icon {
   .productsPage__mouses {
     grid-template-columns: repeat(3, 203px);
   }
+  .login {
+    justify-content: center;
+  }
+  .login__login {
+    flex-grow: 0;
+    width: 60%;
+  }
 }
 @media (max-width: 1220px) {
   .partners {
     padding-left: 86px;
     padding-right: 86px;
+  }
+  .login__photo {
+    width: 100%;
   }
   .productsPage__mouses {
     grid-template-columns: repeat(2, 203px);
@@ -1006,6 +1022,10 @@ input.icon {
   .productsPage__info {
     width: 183px;
     height: 289px;
+  }
+  .login {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -1227,6 +1247,64 @@ input.icon {
     grid-template-columns: repeat(1, 183px);
     justify-content: space-around;
   }
+  .about {
+    padding: 40px 55px 206px 55px;
+  }
+  .about__home, .about__about {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .about__bottomBlock {
+    justify-content: start;
+  }
+  .about__about {
+    font-weight: 700;
+  }
+  .about__par {
+    color: rgb(97, 100, 103);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0px;
+    max-width: 100%;
+  }
+  .about__team {
+    max-width: 100%;
+  }
+  .about__img {
+    margin-bottom: 32px;
+    max-width: 100%;
+    height: auto;
+  }
+  .about__heading {
+    font-size: 28px;
+    margin-bottom: 36px;
+  }
+  .about__underline {
+    display: none;
+  }
+  .login {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+  .login__topBlock {
+    display: none;
+  }
+  .login__login {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .login__heading {
+    color: rgb(57, 61, 69);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
 @media (max-width: 740px) {
   .logitech {
@@ -1292,16 +1370,37 @@ input.icon {
   .logitech__block {
     margin-bottom: 0px;
   }
+  .login {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 @media (max-width: 508px) {
-  .pointer {
+  .pointer-products {
     display: none;
+  }
+  .about {
+    padding: 30px 17px 247px 20px;
   }
   .about__home, .about__about {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 132%;
+  }
+  .about__heading {
+    color: rgb(57, 61, 69);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .about__par {
+    display: none;
+  }
+  .about__underline {
+    display: block;
   }
   .header {
     padding: 0px 0px 0px 20px;
@@ -1580,8 +1679,28 @@ input.icon {
     border: 1px solid #000;
     background: #211F1C;
     color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.7s;
   }
-}
-.footer {
-  display: none;
+  .form2__apply:hover {
+    background: rgb(255, 255, 255);
+    color: #211F1C;
+  }
+  .login {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .login__login {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+  }
+  .login__heading {
+    color: rgb(57, 61, 69);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }/*# sourceMappingURL=style.css.map */
