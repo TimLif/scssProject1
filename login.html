@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAGAZ MAZAFAKA</title>
+    <title>Shop</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="pic/phoenix.png" type="image/x-icon">
+
 </head>
 
 <body>
     <header class="header">
         <a href="index.html" class="header__logo">Shoply.</a>
+        <a href="#" class="header__burger"><img class="header__burger-img" src="pic/burger.svg" alt="menu"></a>
         <div class="header__container">
+            <img class="header__close" src="pic/close.svg" alt="close">
             <nav class="header__nav">
                 <ul class="menu">
                     <li class="menu__li"><a href="index.html" class="menu__link">Home</a> </li>
-                    <li class="menu__li">/</li>
+                    <li class="menu__li menu__li-slash">/</li>
                     <li class="menu__li"><a href="products.html" class="menu__link">Products</a> </li>
-                    <li class="menu__li">/</li>
+                    <li class="menu__li menu__li-slash">/</li>
                     <li class="menu__li"> <a href="about.html" class="menu__link">About</a> </li>
                 </ul>
             </nav>
@@ -46,15 +50,15 @@
                     </svg>
                     <img class="header__buy0" src="pic/korzina0.svg" alt="korzina">
                 </a>
-                <a class="header__login" href="#">Login</a>
+                <a class="header__login" href="login.html">Login</a>
             </div>
         </div>
 
     </header>
 
     <section class="login">
-        <div class="login__photo">
-            <img src="pic/clock.png" alt="clock">
+        <div class="login__topBlock">
+            <img class="login__photo" src="pic/clock.png" alt="clock">
         </div>
         <div class="login__login">
             <h2 class="login__heading">LOGIN</h2>
@@ -69,6 +73,20 @@
         </div>
     </section>
 
+
+    <script>
+        const burgerEl = document.querySelector(".header__burger");
+        const navEl = document.querySelector(".header__container");
+        const closeEl = document.querySelector(".header__close");
+
+        burgerEl.addEventListener("click", function (e) {
+            navEl.style.left = 0;
+        });
+
+        closeEl.addEventListener("click", function (e) {
+            navEl.style.left = "-100%";
+        });
+    </script>
 </body>
 
 </html>
