@@ -67,7 +67,7 @@
             <div class="productsPage__leftBlock">
                 <div class="productsPage__block-mob">
                     <h3 class="productsPage__filter">Filter</h3>
-                    <img class="productsPage__close-mob" src="pic/closeFilter.svg" alt="close">
+                    <a href="index.html"><img class="productsPage__close-mob" src="pic/closeFilter.svg" alt="close"></a>
                 </div>
 
 
@@ -280,6 +280,265 @@
 
         // });
 
+
+    </script>
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="pic/phoenix.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="header header-products">
+        <a href="index.html" class="header__logo">Shoply.</a>
+        <a href="#" class="header__burger"><img class="header__burger-img" src="pic/burger.svg" alt="menu"></a>
+        <div class="header__container">
+            <img class="header__close" src="pic/close.svg" alt="close">
+            <nav class="header__nav">
+                <ul class="menu">
+                    <li class="menu__li"><a href="index.html" class="menu__link">Home</a> </li>
+                    <li class="menu__li menu__li-slash">/</li>
+                    <li class="menu__li"><a href="products.html" class="menu__link">Products</a> </li>
+                    <li class="menu__li menu__li-slash">/</li>
+                    <li class="menu__li"> <a href="about.html" class="menu__link">About</a> </li>
+                </ul>
+            </nav>
+            <div class="header__rightBlock">
+                <a class="header__buy" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="32"
+                        viewBox="0 0 29 32" fill="none">
+                        <g clip-path="url(#clip0_106_167)">
+                            <path
+                                d="M10.7695 29.3332C11.4303 29.3332 11.966 28.7362 11.966 27.9998C11.966 27.2635 11.4303 26.6665 10.7695 26.6665C10.1086 26.6665 9.57288 27.2635 9.57288 27.9998C9.57288 28.7362 10.1086 29.3332 10.7695 29.3332Z"
+                                stroke="#616467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M23.9316 29.3332C24.5924 29.3332 25.1281 28.7362 25.1281 27.9998C25.1281 27.2635 24.5924 26.6665 23.9316 26.6665C23.2707 26.6665 22.735 27.2635 22.735 27.9998C22.735 28.7362 23.2707 29.3332 23.9316 29.3332Z"
+                                stroke="#616467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M1.19653 1.3335H5.98286L9.18969 19.1868C9.29911 19.8007 9.59881 20.3521 10.0363 20.7446C10.4738 21.137 11.0213 21.3455 11.5829 21.3335H23.2136C23.7752 21.3455 24.3226 21.137 24.7601 20.7446C25.1977 20.3521 25.4974 19.8007 25.6068 19.1868L27.5213 8.00016H7.17944"
+                                stroke="#616467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_106_167">
+                                <rect width="28.7179" height="32" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <img class="header__buy0" src="pic/korzina0.svg" alt="korzina">
+                </a>
+                <a class="header__login" href="login.html">Login</a>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="productsPage">
+
+
+        <div class="pointer pointer-products"><span class="about__home">Home > </span> <span
+                class="about__about">Product</span>
+        </div>
+
+        <div class="productsPage__block">
+            <div class="productsPage__leftBlock">
+                <div class="productsPage__block-mob">
+                    <h3 class="productsPage__filter">Filter</h3>
+                    <a href="index.html"><img class="productsPage__close-mob" src="pic/closeFilter.svg" alt="close"></a>
+                </div>
+
+
+                <form class="form">
+                    <p class="form__par">Product Category</p>
+                    <div class="form__block">
+                        <label class="form__label" for="electronic">Electronic</label>
+                        <input id="electronic" type="checkbox">
+                    </div>
+
+                    <div class="form__block">
+                        <label class="form__label" for="jawelery">Jawelery</label>
+                        <input id="jawelery" type="checkbox">
+                    </div>
+
+                    <div class="form__block">
+                        <label class="form__label" for="womenClothing">Women’s Clothing</label>
+                        <input id="womenClothing" type="checkbox">
+                    </div>
+
+                    <div class="form__block">
+                        <label class="form__label" for="menClothing">Men’s Clothing</label>
+                        <input id="menClothing" type="checkbox">
+                    </div>
+
+
+                </form>
+
+                <select class="select">
+                    <option class="select__option">Others1</option>
+                    <option class="select__option">Others2</option>
+                    <option class="select__option">Others3</option>
+                    <option class="select__option" selected>Others</option>
+                </select>
+
+                <h3 class="productsPage__range">Price range</h3>
+
+                <form class="form2">
+                    <input class="form2__min" type="text" placeholder="Min">
+                    <input class="form2__max" type="text" placeholder="$400">
+                    <button class="form2__set" type="submit">Set Price</button>
+                    <!-- <div class="form2__button-block"></div> -->
+                    <button class="form2__clear" type="submit">Clear Filter</button>
+                    <button class="form2__apply" type="submit">Apply</button>
+
+                </form>
+            </div>
+
+            <div class="productsPage__rightBlock">
+                <div class="productsPage__search">
+                    <input class="productsPage__input icon" type="search" placeholder="Mouse">
+                </div>
+                <div class="productsPage__searchResult">
+                    <p>Search result for <b>“Mouse”</b></p>
+                    <div>
+                        <span class="productsPage__sort">Sort by</span>
+                        <select class="productsPage__sort">
+                            <option selected>Name (A-Z)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="productsPage__mouses">
+                    <figure class="productsPage__info productsPage__info-1">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-2">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-3">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-4">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-5">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-6">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-7">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+
+                    <figure class="productsPage__info productsPage__info-8">
+                        <figcaption class="productsPage__card">
+                            <a class="productsPage__button" href="#">DETAIL</a>
+                            <a href="#"><img class="productsPage__basket" src="pic/basket2.svg" alt="basket"></a>
+                        </figcaption>
+                        <div class="productsPage__model">
+                            <p class="productsPage__g102">Logitech G102</p>
+                            <p class="productsPage__price">$34.00</p>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__leftBlock">
+            <a href="index.html" class="footer__logo">Shoply.</a>
+            <p class="footer__par">© Copyright 2021. Created by OurTeam</p>
+        </div>
+        <div class="footer__rightBlock">
+            <a class="footer__links" href="#"><img class="footer__icons" src="pic/fb.svg" alt="facebook"></a>
+            <a class="footer__links" href="#"><img class="footer__icons" src="pic/inst.svg" alt="instagram"></a>
+            <a class="footer__links" href="#"><img class="footer__icons" src="pic/twit.svg" alt="twitter"></a>
+            <a class="footer__links" href="#"><img class="footer__icons" src="pic/youtube.svg" alt="youtube"></a>
+        </div>
+    </footer>
+
+    <script>
+
+        const burgerEl = document.querySelector(".header__burger");
+        const navEl = document.querySelector(".header__container");
+        const closeEl = document.querySelector(".header__close");
+
+        burgerEl.addEventListener("click", function (e) {
+            navEl.style.left = 0;
+        });
+
+        closeEl.addEventListener("click", function (e) {
+            navEl.style.left = "-100%";
+        });
+
+      
 
     </script>
 </body>
