@@ -840,16 +840,21 @@ input.icon {
   width: 100%;
   height: 52px;
   border-radius: 30px;
-  padding-left: 20px;
+  padding-left: 40px;
   padding-right: 20px;
   box-sizing: border-box;
 }
 .login__input-1 {
-  background: url(pic/user.svg) no-repeat left;
+  background: url(pic/user.svg);
+  background-repeat: no-repeat;
+  background-position: 15px;
   margin-bottom: 41px;
 }
 .login__input-2 {
-  background: url(pic/lock.svg) no-repeat left;
+  background: url(pic/lock.svg);
+  background-repeat: no-repeat;
+  background-position: 15px;
+  margin-bottom: 41px;
   margin-bottom: 8px;
 }
 .login__par {
@@ -948,6 +953,10 @@ input.icon {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .product__block {
+    justify-content: center;
+    gap: 30px;
+  }
   .productsPage__mouses {
     grid-template-columns: repeat(3, 203px);
   }
@@ -990,6 +999,9 @@ input.icon {
   .benefits__conditions-3 {
     flex-grow: 1;
     margin: auto;
+  }
+  .product__block {
+    justify-content: space-evenly;
   }
 }
 @media (max-width: 971px) {
@@ -1373,6 +1385,9 @@ input.icon {
   .login {
     padding-left: 80px;
     padding-right: 80px;
+  }
+  .product__block {
+    justify-content: center;
   }
 }
 @media (max-width: 508px) {
